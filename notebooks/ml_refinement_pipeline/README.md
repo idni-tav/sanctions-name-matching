@@ -12,7 +12,7 @@ The goal is to assess the predictive power of existing features and explore whet
 ## 2. Pipeline Structure  
 
 - `10_feature_engineering.ipynb` – Extracts relevant features and prepares the dataset for training.
-- Outputs:
+  - Outputs:
     - `features_data.pkl`  
     - `features_sample_labeled.pkl`  
 
