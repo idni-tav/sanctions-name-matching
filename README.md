@@ -141,6 +141,6 @@ During manual review, it became clear that certain tokens (e.g. "Al", "Mohammed"
 - Test generalizability across new datasets
 Applying the matching logic to other datasets, such as those from OFAC, the UN, or commercial watchlists, would help test its robustness. It would also expose the method to a wider variety of naming formats, spelling irregularities, and transliteration issues, which could inform improvements to both rule-based and ML components.
 
-For more specific low-level improvements please consult the following notebooks:
-- [`notebooks/matching_pipeline/05_compare_matching_strategies.ipynb`](notebooks/matching_pipeline/05_compare_matching_strategies.ipynb)
-- [`notebooks/ml_refinement_pipeline/11_model_selection_and_training.ipynb`](notebooks/ml_refinement_pipeline/11_model_selection_and_training.ipynb)
+For more specific improvements please consult the pipeline specific README.md files:
+- [`notebooks/matching_pipeline/README.md`](notebooks/matching_pipeline/README.md)
+- [`notebooks/ml_refinement_pipeline/README.md`](notebooks/ml_refinement_pipeline/README.md)
