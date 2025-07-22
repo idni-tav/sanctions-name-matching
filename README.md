@@ -122,8 +122,6 @@ jupyter notebook
 - The ML validation reinforced the strength of the grouped matching strategy and confirmed its ability to consistently outperform the baseline.
 - It also offered insights for refinement, helping ensure that the best possible matches are consistently selected from a list of candidates.
 
-- The ML validation reinforced the strength of the grouped matching strategy and confirmed its ability to consistently outperform the baseline.
-
 For detailed results, see:
 - [`notebooks/matching_pipeline/`](notebooks/matching_pipeline/)
 - [`notebooks/ml_refinement_pipeline/`](notebooks/ml_refinement_pipeline/)
