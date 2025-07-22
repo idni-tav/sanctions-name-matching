@@ -48,14 +48,14 @@ data/
 #### Step 1: Clone the repository
 
 ```bash
-git clone https://github.com/idni-tav/sanctions-data-cleaning.git
+git clone https://github.com/idni-tav/sanctions-name-matching.git
 cd sanctions-name-matching
 ```
 
 #### Step 2: Download the raw data
 
 Place the raw financial sanctions data files into the data/raw/ folder.
-You will need to manually download the following two files:
+You will need to manually download the following publicly available files:
 
 - UK Sanctions List
 
@@ -114,13 +114,15 @@ jupyter notebook
 
 ## 5. Key Results
 
-- The rule-based grouped method produced high-precision results, with  which near-perfect `match` precision and strong recall (0.91) on `not match` labels.
+- The rule-based grouped method produced high-precision results, with perfect precision and strong recall (0.92) on `not match` labels.
 - The standard fuzzy-matching approach was more aggressive but showed lower precision and recall, highlighting the advantages of the custom grouped strategy in high-risk settings.
 - A supervised learning pipeline was used to validate and refine the rule-based results. It began by training several models specifically for this task.
     - The best performing model was a tuned Random Forest, which was then used to predict labels on a holdout set — confirming the robustness of the training-phase predictions.
     - Feature importance analysis revealed that the most informative features were derived from the rule-based logic itself.
-- Overall, the ML validation reinforced the quality of the grouped matching strategy and its superiority over the baseline in labeling matches.
+- The ML validation reinforced the strength of the grouped matching strategy and confirmed its ability to consistently outperform the baseline.
 - It also offered insights for refinement, helping ensure that the best possible matches are consistently selected from a list of candidates.
+
+- The ML validation reinforced the strength of the grouped matching strategy and confirmed its ability to consistently outperform the baseline.
 
 For detailed results, see:
 - [`notebooks/matching_pipeline/`](notebooks/matching_pipeline/)
@@ -131,7 +133,7 @@ For detailed results, see:
   - The project focuses on matching individuals from the UK and EU sanctions lists, which have significant overlap due to shared geopolitical interests. This made them an ideal dataset for developing and validating the matching logic. However, it also means the approach may be highly tailored to this specific context and might not generalize well to other sanctions datasets with different structures or naming conventions.
 
 - Subjectivity in manual validation
-  -Several steps required human judgment to decide whether two names referred to the same person. While a set of consistent guidelines was applied to reduce bias, name interpretation remains inherently subjective. This is especially true in cases involving transliteration or cultural naming patterns, which could benefit from linguistic or regional expertise.
+  - Several steps required human judgment to decide whether two names referred to the same person. While a set of consistent guidelines was applied to reduce bias, name interpretation remains inherently subjective. This is especially true in cases involving transliteration or cultural naming patterns, which could benefit from linguistic or regional expertise.
 
  
 ## 7. Future Work
