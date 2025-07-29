@@ -111,6 +111,7 @@ jupyter notebook
 - For each notebook, run all cells. Use the menu option `Cell > Run All`or run cells one by one. This will generate all the output files and place them in the correct folders.
 
 > Note: When cloning the repository, the final output .csv files are already included in `data/final/`. These will be re-generated when the notebooks are executed.
+---
 
 ## 5. Key Results
 
@@ -125,6 +126,7 @@ jupyter notebook
 For detailed results, see:
 - [`notebooks/matching_pipeline/`](notebooks/matching_pipeline/)
 - [`notebooks/ml_refinement_pipeline/`](notebooks/ml_refinement_pipeline/)
+---
 
 ## 6. Limitations
 - Overfitting to UK/EU context
@@ -133,7 +135,7 @@ For detailed results, see:
 - Subjectivity in manual validation
   - Several steps required human judgment to decide whether two names referred to the same person. While a set of consistent guidelines was applied to reduce bias, name interpretation remains inherently subjective. This is especially true in cases involving transliteration or cultural naming patterns, which could benefit from linguistic or regional expertise.
 
- 
+ ---
 ## 7. Future Work
 - Incorporate language-specific heuristics
 During manual review, it became clear that certain tokens (e.g. "Al", "Mohammed") are so common in some languages that they add little value for distinguishing names. The current approach used some length-weighting, but didn’t explicitly account for language frequency or cultural naming patterns. Future iterations could integrate heuristics for common name parts in languages like Arabic and Russian to reduce noise and improve results.
@@ -144,3 +146,4 @@ Applying the matching logic to other datasets, such as those from OFAC, the UN, 
 For more specific improvements please consult the pipeline specific README.md files:
 - [`notebooks/matching_pipeline/README.md`](notebooks/matching_pipeline/README.md)
 - [`notebooks/ml_refinement_pipeline/README.md`](notebooks/ml_refinement_pipeline/README.md)
+---
